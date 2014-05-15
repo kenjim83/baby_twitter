@@ -25,3 +25,11 @@ end
 get '/info' do
   Demo.new(self).info
 end
+
+get '/user/:id' do
+  @userid = params[:id]
+  @user_name = User.find(@userid).name
+  @user_tweets = User.find(@userid).tweets
+
+  erb :profile
+end
