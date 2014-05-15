@@ -1,0 +1,19 @@
+<div class="container">
+	<header>
+		Hello, <%= @user_name %>
+	</header>
+
+  <a href='/logout'>Logout</a>
+
+	<form action="/tweet/new" method="post" accept-charset="utf-8">
+  		<textarea maxlength="140" name="tweet" rows="10" cols="30" placeholder="Tweet here..."></textarea>
+  		<input type="submit" value="New tweet">
+	</form>
+
+	<ul>
+		<% @user_tweets.each do |tweet| %>
+			<li><%= tweet.content %></li>
+		<% end %>
+	</ul>
+
+</div>

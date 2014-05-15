@@ -26,15 +26,6 @@ th {
   /*border: 1px dotted black;*/
 }
 
-img {
-  max-width: 10%;
-}
-
 .login, .create_account {
   margin-bottom: 10px;
-}
-
-
-ul {
-	list-style: none;
 }
