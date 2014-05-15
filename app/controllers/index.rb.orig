@@ -20,6 +20,7 @@ end
 
 get '/user/:id' do
 
+<<<<<<< HEAD
 get '/info' do
   Demo.new(self).info
 end
@@ -31,3 +32,7 @@ get '/user/:id' do
 
   erb :profile
 end
+=======
+"PROFILE PAGE!"
+end
+>>>>>>> 024ed08dc0cc6835c4dfc1d6581805d06c211c94

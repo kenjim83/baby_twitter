@@ -26,11 +26,16 @@ th {
   /*border: 1px dotted black;*/
 }
 
-.login, .create_account {
-  margin-bottom: 10px;
+<<<<<<< HEAD
+th {
+  text-align: left;
 }
-
 
 ul {
 	list-style: none;
 }
+=======
+.login, .create_account {
+  margin-bottom: 10px;
+}
+>>>>>>> 024ed08dc0cc6835c4dfc1d6581805d06c211c94
