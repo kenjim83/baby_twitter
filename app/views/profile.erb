@@ -1,19 +1,24 @@
 <div class="container">
 	<header>
-		Hello, <%= @user_name %>
+    <img class="float-left" src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">
+
+    <form action="/tweet/new" method="post" accept-charset="utf-8" class="float-right grid_5 tweet-form">
+      <textarea class="tweetbox" maxlength="140" name="tweet" placeholder="Tweet here..."></textarea>
+      <input class="tweet-btn" type="submit" value="New tweet">
+  </form>
 	</header>
 
-  <a href='/logout'>Logout</a>
+  <div class="user-controls">
+    <p>Hello, <%= @user_name %></p>
+    <a href='/logout'>Logout</a>
+  </div>
 
-	<form action="/tweet/new" method="post" accept-charset="utf-8">
-  		<textarea maxlength="140" name="tweet" rows="10" cols="30" placeholder="Tweet here..."></textarea>
-  		<input type="submit" value="New tweet">
-	</form>
-
+<div class="tweet-feed grid_5 float-right">
 	<ul>
 		<% @user_tweets.each do |tweet| %>
 			<li><%= tweet.content %></li>
 		<% end %>
 	</ul>
+</div>
 
 </div>
