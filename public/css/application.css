@@ -131,10 +131,14 @@ ul {
 
 /* Login & create account
 =========================== */
-
+html{
+  font-family: 'chunkfiveroman';
+}
 .login, .create_account {
   margin-bottom: 10px;
 }
+
+
 
 ul {
 	list-style: none;
@@ -172,4 +176,23 @@ h3 {
 
 h2 {
   color: gray;
+}
+
+.time_stamp {
+  font-size: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar li{
+   clear: both;
+   text-decoration: none;
+  padding: 10px;
+  background: lightblue;
+  border: 1px solid #999;
+  border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: -1px 2px 2px 1px #666;
 }

@@ -1,6 +1,6 @@
 <div class="container">
 	<header>
-    <h1 class="brand">Angry Tweets</h1>
+    <a href="/home"><h1 class="brand">Angry Tweets</h1></a>
     <img class="float-left" src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">
 
     <form action="/tweet/new" method="post" accept-charset="utf-8" class="float-right grid_5 tweet-form standard-form">
@@ -8,7 +8,6 @@
       <input class="tweet-btn" type="submit" value="New tweet">
   </form>
 	</header>
-
   <div class="user-controls">
     <p class="greeting">Hello, <%= @user.username %></p>
     <form action ='/follow/<%= @user.id %>'method="post">
@@ -20,7 +19,7 @@
   </div>
 
   <div class="tweet-feed grid_5 float-right">
-  	<ul>
+  	<ul reversed>
   		<% @user_tweets.each do |tweet| %>
   			<li class="tweet"><%= tweet.content %></li>
   		<% end %>
