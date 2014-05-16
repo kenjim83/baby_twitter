@@ -27,19 +27,23 @@ end
 
 
 get '/user/:id' do
-  if session[:user_id]
-    @userid = params[:id]
-    @user_name = User.find(@userid).name
-    @user_tweets = User.find(@userid).tweets
+  if User.find(params[:id]) == nil
+    redirect '/oops'
+  elsif session[:user_id] == params[:id]
+    @user = User.find(params[:id])
+    @user_name = @user.name
+    @user_tweets = @user.tweets
     erb :profile
   else
-    redirect '/'
+    @user = User.find(params[:id])
+    @user_name = @user.name
+    @user_tweets = @user.tweets
+    erb :profile
+    #redirect '/'
   end
 
 end
 
-
-# Tweets
 
 post '/tweet/new' do
   # Create new tweet per the user id
@@ -47,5 +51,10 @@ post '/tweet/new' do
   User.find(user_id).tweets.create(content: params[:tweet])
   redirect "/user/#{user_id}"
 end
+
+get '/oops' do
+  "You have reached an error page"
+end
+
 
 
