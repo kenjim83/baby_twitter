@@ -1,10 +1,4 @@
-	/*
- Width: 600px
- # Columns : 8
- Column width: 68px
- Gutter : 8px
 
- */
 .grid_1 { width: 104px; }
 .grid_2 { width: 232px; }
 .grid_3 { width: 360px; }
@@ -33,23 +27,18 @@
 .omega{margin-right:0px;}
 
 .container{
-	width: 600px;
+	width: 1000px;
 	margin: auto;
 	clear: both;
 }
 
 .big_container{
-	width:1100px;
+	width:1400px;
 	margin: auto;
 	clear: both;
-	border: solid 1px #E3E3E3;
+	/*border: solid 1px #E3E3E3;*/
 }
 
-/*.container input{
-	width: 200px;
-	margin-left: 0px;
-	clear: both;
-}*/
 
 
 
