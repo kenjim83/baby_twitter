@@ -29,7 +29,6 @@ img {
 
 
 form {
-  /*background: #ccc;*/
   border-radius: 3px;
   padding: 10px;
   text-align: center;
@@ -43,7 +42,6 @@ form {
 }
 
 input {
-  /*display: block;*/
   margin: 5px;
   padding: 5px;
 }
@@ -61,7 +59,6 @@ ul {
   margin: 20px auto;
   width: 1000px;
   padding: 0px 20px 20px 20px;
-  /*border: 1px dotted black;*/
 }
 
 /* Profile Page
@@ -77,11 +74,12 @@ ul {
 
 .login, .create_account {
   margin-bottom: 10px;
-
 }
 
 .user-controls {
   clear: left;
+  width: 25%;
+  text-align: center;
 }
 
 
@@ -121,6 +119,7 @@ ul {
 
 .tweet {
   background: #fff;
+  box-shadow: inset 0 0 3px #666;
   height: 50px;
 }
 
@@ -132,6 +131,7 @@ ul {
 .greeting {
   font-family: 'chunkfiveroman', 'sans-serif';
   font-size: 1.5em;
+  color: #999;
 }
 
 .brand {
@@ -139,6 +139,7 @@ ul {
   color: #999;
   letter-spacing: 2px;
 }
+
 
 /* Login & create account
 =========================== */
