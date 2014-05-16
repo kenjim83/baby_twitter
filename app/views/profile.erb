@@ -11,10 +11,10 @@
   <div class="user-controls">
     <p class="greeting">Hello, <%= @user.username %></p>
     <form action ='/follow/<%= @user.id %>'method="post">
-      <input type='submit' value="Follow me!">
+      <input class="btn" type='submit' value="Follow me!">
     </form>
     <form action ='/logout' method="get">
-      <input type='submit' value="Logout">
+      <input class="btn" type='submit' value="Logout">
     </form>
   </div>
 

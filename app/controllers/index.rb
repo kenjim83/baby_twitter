@@ -1,6 +1,8 @@
 # Home
 
 get '/' do
+  @last_ten_users = User.order(:created_at).limit(10)
+
   erb :index
 end
 
