@@ -1,5 +1,5 @@
 <div class="container">
-
+    <h1><img src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">&nbsp;&nbsp;Angry Tweets</h1>
   <% if session[:user_id] == @user.id %>
   	<header>
   		Hello, <%= @user_name %>
@@ -12,20 +12,23 @@
     		<input type="submit" value="New tweet">
   	</form>
 
-  	<ul>
-  		<% @user_tweets.each do |tweet| %>
-  			<li><%= tweet.content %></li>
-  		<% end %>
-  	</ul>
-  <% else %>
-    <header>
-     <%= @user_name %>'s News Feed <br>
-     <a href ="/follow-action">Follow</a>
-    </header>
-  <ul>
+    <ul>
       <% @user_tweets.each do |tweet| %>
         <li><%= tweet.content %></li>
       <% end %>
-  </ul>
+    </ul>
+  <% else %>
+    <header>
+
+     <%= @user_name %>'s News Feed <br>
+     <a href ="/follow-action">Follow</a>
+    </header>
+  <table>
+    <% @user_tweets.each do |tweet| %>
+      <tr>
+          <td><%= tweet.content %></td>
+      </tr>
+    <% end %>
+  </table>
   <%end%>
 </div>
