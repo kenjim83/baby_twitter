@@ -1,7 +1,7 @@
 <div class="big_container">
   <div class="login">
     <form action='/user/login' method="post">
-      <p id="header"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;Angry Tweets</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p id="header"><font color="grey">&nbsp;&nbsp;&nbsp;&nbsp;Angry Tweets</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="text" name="username" placeholder="Username" class="existing">
       <input type="text" name="password" placeholder="Password" class="existing">
       <input type="submit" value="Login" class="existing"></p>
@@ -25,4 +25,16 @@
 </div>
 
 
-<!--session[:user_id] = -->
+
+
+  <div class="home-feed">
+  <h4>Check out some fellow tweeters!</h4>
+    <ul>
+      <% @last_ten_users.each do |user| %>
+        <li class="tweet home-user"><center><a href="/user/<%= user.id %>"><%= user.username %></a></center></li>
+      <% end %>
+    </ul>
+  </div>
+
+
+
