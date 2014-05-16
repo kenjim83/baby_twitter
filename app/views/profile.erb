@@ -1,7 +1,6 @@
 <div class="container">
 	<header>
     <h1 class="brand">Angry Tweets</h1>
-    <img class="float-left" src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">
 
     <form action="/tweet/new" method="post" accept-charset="utf-8" class="float-right grid_5 tweet-form standard-form">
       <textarea class="tweetbox" maxlength="140" name="tweet" placeholder="Tweet here..."></textarea>
@@ -12,10 +11,10 @@
   <div class="user-controls">
     <p class="greeting">Hello, <%= @user.username %></p>
     <form action ='/follow/<%= @user.id %>'method="post">
-      <input type='submit' value="Follow me!">
+      <input class="btn" type='submit' value="Follow me!">
     </form>
     <form action ='/logout' method="get">
-      <input type='submit' value="Logout">
+      <input class="btn" type='submit' value="Logout">
     </form>
   </div>
 
