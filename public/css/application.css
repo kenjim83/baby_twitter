@@ -36,7 +36,7 @@ form {
 }
 
 .login {
-  background-color: blue;
+  background-color: lightblue;
   margin-bottom: -20px;
 
 
@@ -102,7 +102,7 @@ ul {
   margin-left: 20px;
 }
 
-.tweet-feed {
+.tweet-feed, .home-feed {
   clear: both;
   margin: 0px 50px 50px 0px;
   padding: 10px;
@@ -113,9 +113,20 @@ ul {
   box-shadow: -1px 2px 2px 1px #666;
 }
 
+.home-feed {
+  margin: 0 auto;
+  width: 40%;
+}
+
+
 .tweet {
   background: #fff;
   height: 50px;
+}
+
+.home-user {
+  height: 20px;
+  text-align: center;
 }
 
 .greeting {
