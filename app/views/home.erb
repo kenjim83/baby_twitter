@@ -1,0 +1,32 @@
+
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <form action="/tweet/new" method="post" accept-charset="utf-8" class="grid_2 tweet-form standard-form">
+      <textarea class="tweetbox" maxlength="140" name="tweet" placeholder="Tweet here..."></textarea>
+      <input class="tweet-btn" type="submit" value="New tweet">
+  </form>
+  <div class="navbar grid_4 omega">
+    <ul>
+      <center><li><a href="/user/<%= @user_id%>">Profile</a></li></center>
+      <li><form action ='/logout' method="get">
+      <input type='submit' value="Logout">
+    </form></li>
+    </ul>
+  </div>
+  <div class="tweet-feed grid_5 float-right" id ="newsfeed">
+    <ul reversed><% @all_following.each do |user|%>
+          <% user.tweets.each do |tweet|%>
+            <li class="tweet"><%= user.username%>: <%= tweet.content %><br><br>
+              <div class="time_stamp"><%= tweet.created_at %></div></li>
+          <% end %>
+        <% end %>
+    </ul>
+  </div>
+
+
+
+</div>
