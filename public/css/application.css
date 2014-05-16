@@ -1,17 +1,24 @@
-h1 {
+/*h1 {
   font-family: ;
   color: ;
-}
+}*/
 
 form {
-  background: #ccc;
+  /*background: #ccc;*/
   border-radius: 3px;
   padding: 10px;
 }
 
+.login {
+  background-color: blue;
+  margin-bottom: -20px;
+   
+
+}
+
 input {
-  display: block;
-  margin: 10px;
+  /*display: block;*/
+  margin: 5px;
   padding: 5px;
 }
 
@@ -21,13 +28,9 @@ th {
 
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 1000px;
   padding: 0px 20px 20px 20px;
   /*border: 1px dotted black;*/
-}
-
-img {
-  max-width: 10%;
 }
 
 .login, .create_account {
@@ -37,4 +40,38 @@ img {
 
 ul {
 	list-style: none;
+}
+
+#header {
+  font-size: 30px;
+}
+
+.existing {
+  font-size: 17px;
+}
+
+.create {
+  display: block;
+}
+
+.create_account input{
+  font-size: 20px;
+  margin: 15px;
+}
+
+.create_account {
+  border: 1px solid;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+h3 {
+  font-size: 60px;
+  margin-bottom: -2px;
+  margin-top: 5px;
+
+}
+
+h2 {
+  color: gray;
 }

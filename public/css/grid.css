@@ -1,18 +1,18 @@
 	/*
- Width: 600px
+ Width: 1000px
  # Columns : 8
- Column width: 68px
- Gutter : 8px 
+ Column width: 104px
+ Gutter : 24px 
 
  */
-.grid_1 { width: 68px; }
-.grid_2 { width: 144px; }
-.grid_3 { width: 220px; }
-.grid_4 { width: 296px; }
-.grid_5 { width: 372px; }
-.grid_6 { width: 448px; }
-.grid_7 { width: 524px; }
-.grid_8 { width: 600px; }
+.grid_1 { width: 104px; }
+.grid_2 { width: 232px; }
+.grid_3 { width: 360px; }
+.grid_4 { width: 488px; }
+.grid_5 { width: 616px; }
+.grid_6 { width: 744px; }
+.grid_7 { width: 872px; }
+.grid_8 { width: 1000px; }
 
 
 .grid_1,
@@ -33,23 +33,18 @@
 .omega{margin-right:0px;}
 
 .container{
-	width: 600px; 
+	width: 1000px; 
 	margin: auto;
 	clear: both;
 }
 
 .big_container{
-	width:1100px;
+	width:1400px;
 	margin: auto;
 	clear: both;
-	border: solid 1px #E3E3E3;
+	/*border: solid 1px #E3E3E3;*/
 }
 
-/*.container input{
-	width: 200px;
-	margin-left: 0px;
-	clear: both;
-}*/
 
 
 

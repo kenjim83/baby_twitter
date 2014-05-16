@@ -1,27 +1,28 @@
-<div class="container">
-
+<div class="big_container">
   <div class="login">
-    <h1><img src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">&nbsp;&nbsp;Welcome to Angry Tweets</h1>
-    <h3>Login to your account</h3>
-
     <form action='/user/login' method="post">
-      <input type="text" name="username" placeholder="Username">
-      <input type="text" name="password" placeholder="Password">
-      <input type="submit" value="Login">
+      <p id="header"><font color="white">&nbsp;&nbsp;&nbsp;&nbsp;Angry Tweets</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="username" placeholder="Username" class="existing">
+      <input type="text" name="password" placeholder="Password" class="existing">
+      <input type="submit" value="Login" class="existing"></p>
     </form>
   </div>
-
-  <div class="create_account">
-    <h3>Create an account</h3>
-     <form action='/user/new' method="post">
-      <input type="text" name="name" placeholder="Your name">
-      <input type="text" name="username" placeholder="Create a username">
-      <input type="text" name="password" placeholder="Create a password">
-      <input type="submit" value="Create Account">
-    </form>
-  </div>
-
-
 </div>
+<div class="container">
+    <br><br><br><br><br>
+    <div class="grid_2"></div>
+    <center><div class="create_account grid_4">
+        <h3>Sign Up!</h3>
+        <h2><i>Make an Angry Tweet Now</i></h2>
+       <form action='/user/new' method="post">
+        <input type="text" name="name" placeholder="Your name" class="create">
+        <input type="text" name="username" placeholder="Create a username" class="create">
+        <input type="text" name="password" placeholder="Create a password" class="create">
+        <input type="submit" value="Create Account" class="create">
+      </form>
+    </div></center>
+    <div class="grid_2 omega"></div>
+</div>
+
 
 <!--session[:user_id] = -->
