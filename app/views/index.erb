@@ -16,6 +16,9 @@
         <h2><i>Make an Angry Tweet Now</i></h2>
        <form action='/user/new' method="post">
         <input type="text" name="name" placeholder="Your name" class="create">
+        <% if flash[:name_taken] %>
+        <p>username taken</p>
+        <% end %>
         <input type="text" name="username" placeholder="Create a username" class="create">
         <input type="text" name="password" placeholder="Create a password" class="create">
         <input type="submit" value="Create Account" class="create">

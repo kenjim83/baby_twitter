@@ -1,5 +1,4 @@
 # Home
-
 get '/' do
   @last_ten_users = User.order(:created_at).limit(10)
 
@@ -17,9 +16,17 @@ post '/user/login' do
 end
 
 post '/user/new' do
-  @user = User.create(params)
-  session[:user_id] = @user.id
-  redirect "/user/#{@user.id}"
+  @user = User.new(params)
+  if @user.valid?
+    @user.save
+    session[:user_id] = @user.id
+    flash[:name_taken] = false
+    redirect "/user/#{@user.id}"
+  else
+    flash[:name_taken] = true
+    redirect "/"
+  end
+
 end
 
 get '/logout' do
