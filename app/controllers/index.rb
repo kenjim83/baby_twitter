@@ -56,5 +56,11 @@ get '/oops' do
   "You have reached an error page"
 end
 
+post '/follow/:user_id' do
+  @user_id = session[:user_id]
+  @user_to_follow = params[:user_id]
+  User.where(id: @user_id).first.follows.create(user_id: @user_id, follow_user_id: @user_to_follow)
 
+  redirect "/user/#{@user_to_follow}"
+end
 
